@@ -1,0 +1,378 @@
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    animation: slideUp 0.5s ease;
+}
+
+/* Section label shared style */
+.sectionLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+}
+
+/* ═══ QUESTION CARD ═══ */
+.questionCard {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.questionText {
+    background: var(--bg-input);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 16px;
+}
+
+.questionText code {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.7;
+}
+
+/* ═══ SOLUTION CARD ═══ */
+.solutionCard {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.solutionHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.stepsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stepItem {
+    background: var(--bg-input);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    transition: border-color var(--transition-fast);
+}
+
+.stepItem:hover {
+    border-color: var(--glass-border-hover);
+}
+
+.stepHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.88rem;
+}
+
+.mathExpr {
+    background: white;
+    border: 1px solid rgba(124, 58, 237, 0.1);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    margin-left: 32px;
+    margin-top: 8px;
+}
+
+.mathExpr code {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    color: var(--accent-purple);
+}
+
+.stepResult {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--accent-green);
+    margin-left: 32px;
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+.stepExplanation {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+    padding-left: 32px;
+    line-height: 1.5;
+}
+
+/* Final Answer */
+.finalAnswer {
+    margin-top: 20px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(99, 102, 241, 0.05));
+    border: 1.5px solid rgba(124, 58, 237, 0.15);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.answerBadge {
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    background: var(--gradient-primary);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+
+.answerValue {
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-purple);
+}
+
+/* ═══ VERIFICATION ═══ */
+.verificationCard {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 18px 24px;
+    box-shadow: var(--shadow-xs);
+}
+
+/* ═══ EXPLANATION CARD ═══ */
+.explanationCard {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.explanationSummary {
+    font-size: 0.92rem;
+    line-height: 1.8;
+    color: var(--text-primary);
+    white-space: pre-wrap;
+    margin-bottom: 20px;
+    padding: 16px;
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--accent-purple);
+}
+
+.explanationSection {
+    margin-bottom: 18px;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    background: var(--bg-input);
+}
+
+.explanationSection:last-child {
+    margin-bottom: 0;
+}
+
+.expSectionHeader {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.expSectionHeader h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.expIcon {
+    font-size: 1rem;
+}
+
+.conceptPill {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: rgba(124, 58, 237, 0.06);
+    color: var(--accent-purple);
+    border: 1px solid rgba(124, 58, 237, 0.12);
+}
+
+.expList {
+    padding-left: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.expList li {
+    margin-bottom: 6px;
+}
+
+/* Detailed step-by-step explanation */
+.detailedSteps {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.detailedStep {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 18px;
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--accent-purple);
+}
+
+.detailedStep p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.detailedStepNum {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    margin-top: 1px;
+}
+
+/* Compact hints (Watch Out + Pro Tips) */
+.compactHints {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    .compactHints {
+        grid-template-columns: 1fr;
+    }
+}
+
+.hintBox {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 14px 16px;
+    background: var(--bg-input);
+    border-radius: var(--radius-md);
+    font-size: 0.82rem;
+}
+
+.hintBox strong {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.hintBox ul {
+    padding-left: 16px;
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.hintBox ul li {
+    margin-bottom: 2px;
+}
+
+/* ═══ COLLAPSE / TRACE ═══ */
+.traceCard {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 18px 24px;
+    box-shadow: var(--shadow-xs);
+}
+
+.collapseBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.collapseBtn:hover {
+    color: var(--text-accent);
+}
+
+.collapseBtnLeft {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ═══ MEMORY BANNER ═══ */
+.memoryBanner {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.04), rgba(99, 102, 241, 0.04));
+    border: 1px solid rgba(124, 58, 237, 0.12);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideDown 0.3s ease;
+}
+
+.memoryBanner strong {
+    color: var(--accent-purple);
+    font-size: 0.9rem;
+}
+
+/* ═══ FEEDBACK ═══ */
+.feedbackCard {
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-xs);
+}
+
+.feedbackSuccess {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-green);
+    font-size: 0.875rem;
+    padding: 8px 0;
+}

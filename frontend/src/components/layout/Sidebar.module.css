@@ -1,0 +1,134 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-width);
+    height: 100vh;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    overflow-y: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logoIcon {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-md);
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: white;
+    box-shadow: var(--shadow-purple);
+}
+
+.logoTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.logoSub {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.nav {
+    flex: 1;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: all var(--transition-fast);
+    border: 1px solid transparent;
+}
+
+.navItem:hover {
+    background: var(--bg-elevated);
+    color: var(--text-primary);
+}
+
+.active {
+    background: var(--gradient-glow);
+    color: var(--accent-purple);
+    border-color: rgba(124, 58, 237, 0.12);
+    font-weight: 600;
+}
+
+.navIcon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.navLabel {
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: block;
+    line-height: 1.2;
+}
+
+.navDesc {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+.footer {
+    padding: 16px 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78rem;
+    color: var(--accent-green);
+    font-weight: 500;
+}
+
+.statusDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent-green);
+    box-shadow: 0 0 6px rgba(16, 185, 129, 0.4);
+}
+
+.version {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
