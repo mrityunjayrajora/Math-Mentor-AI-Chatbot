@@ -1,0 +1,32 @@
+services:
+  # Backend API (FastAPI)
+  - type: web
+    name: math-mentor-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: PYTHONPATH
+        value: .
+    healthCheckPath: /health
+    plan: free
+
+  # Frontend (Next.js)
+  - type: web
+    name: math-mentor-frontend
+    runtime: node
+    buildCommand: cd frontend && npm install && npm run build
+    startCommand: cd frontend && npm start
+    envVars:
+      - key: BACKEND_URL
+        fromService:
+          name: math-mentor-api
+          type: web
+          property: host
+      - key: NEXT_PUBLIC_API_URL
+        value: /api
+      - key: PORT
+        value: 3000
+    plan: free
